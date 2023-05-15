@@ -6,24 +6,25 @@ export default function PageCard() {
       <Grid sm={12} md={5}>
         <Card css={{ mw: "330px" }}>
           <Card.Header>
-            <Text b>Como usarla?</Text>
+            <Text b>Nuestros objetivos?</Text>
           </Card.Header>
           <Card.Divider />
           <Card.Body css={{ py: "$10" }}>
             <Text>
                 <li>
-               Compra y guarda Bitcoin
+                Crear eventos de tecnología para la comunidad UDLA
                 </li>
-                <h3> o </h3>
                 <li>
-                Guarda tu dinero en dólares digitales
+                Crear eventos de capacitación técnica en tecnologías emergentes(Blockchain,IA)
+                </li>
+                <li>
+                Apoyar a estudiantes en sus proyectos personales 
                 </li>
             </Text>
           </Card.Body>
           <Card.Divider />
           <Card.Footer>
             <Row justify="flex-end">
-         
             </Row>
           </Card.Footer>
         </Card>
@@ -31,21 +32,21 @@ export default function PageCard() {
       <Grid sm={12} md={5}>
         <Card css={{ mw: "330px" }}>
           <Card.Header>
-            <Text b>Porque usarlo?</Text>
+            <Text b>Cómo unirte?</Text>
           </Card.Header>
           <Card.Divider />
           <Card.Body css={{ py: "$10" }}>
             <Text>
-             Ten la custodia completa de tu dinero
+           Ingresa tu email aquí
             </Text>
           </Card.Body>
-          <h3> Unete a la lista de espera:</h3>
+          <h3> Únete al club:</h3>
           <input type="text" placeholder="email"></input>
           <Card.Divider />
           <Card.Footer>
             <Row justify="flex-end">
               <Button size="sm" color="secondary">
-                ver más
+               Enviar
               </Button>
             </Row> 
           </Card.Footer>

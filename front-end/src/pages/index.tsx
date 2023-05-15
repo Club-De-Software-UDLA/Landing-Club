@@ -26,14 +26,14 @@ export default function Home()  {
   // <Navbar/>
   <>
    <Nav/>
-    <div style={{ backgroundColor: "#EEDED6", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+    <div style={{ backgroundColor: "#8B0000", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
      
       <div style={{ color: "green"}}>
          <Text
         h1
         size={60}
         css={{
-          textGradient: "45deg, $blue600 -20%, $pink600 50%",
+          color: "white",
         }}
         weight="bold"
       >
@@ -43,7 +43,7 @@ export default function Home()  {
         h1
         size={60}
         css={{
-          textGradient: "45deg, $purple600 -20%, $pink600 100%",
+          color: "white"
         }}
         weight="bold"
       >
@@ -54,7 +54,7 @@ export default function Home()  {
         size={60}
         css={{
        
-          textGradient: "45deg, $yellow600 -20%, $red600 100%"
+          color: "white"
 
         }}
         weight="bold"
@@ -62,7 +62,7 @@ export default function Home()  {
       Software
       </Text>
 
-        <h2 style={{ color: "green"}}> UDLA </h2>
+        <h2 style={{  color: "white"}}> UDLA </h2>
         <div> 
          
           <div>
@@ -77,14 +77,8 @@ export default function Home()  {
       
    
     
-    <h2> Descargala muy pronto en: </h2>
-    <div style={{color:"black"}}>
-      <h1>
-      <FaAppStoreIos/>
-         <BsAndroid2/>
-      </h1>
-   
-    </div>
+
+
          
       </div>
       <Footer/>
