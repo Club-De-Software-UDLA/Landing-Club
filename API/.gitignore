@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+dist/
+*.log
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sequelize
+/database/config/config.js
+/database/migrations/
+/database/seeders/
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Environment variables
+.env
+
+# Compiled output
+build/
+dist/
+
