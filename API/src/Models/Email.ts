@@ -1,36 +1,11 @@
-import { Model, DataTypes } from 'sequelize';
-import { sequelize } from '../database'; 
+import { Model, DataTypes,Sequelize } from 'sequelize';
+import { ConnectToDB }  from '../server'
 
-class Email extends Model {
-  public id!: number;
-  public email!: string;
+const Email = ConnectToDB.define('Email', {
+email: DataTypes.TEXT,
 
-
-  public readonly createdAt!: Date;
-  public readonly updatedAt!: Date;
-}
-
-Email.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true, 
-      },
-    },
-  },
-  {
-    sequelize,
-    modelName: 'Email',
-    tableName: 'emails',
-  }
-);
-
-export default Email;
+})
+(async () => {
+    await sequelize.sync({ force: true });
+    // Code here
+  })();

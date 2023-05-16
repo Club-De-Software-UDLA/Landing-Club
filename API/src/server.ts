@@ -1,11 +1,12 @@
 import express, { Request, Response } from 'express';
 import { Sequelize } from 'sequelize';
+import { Model, DataTypes } from 'sequelize';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-const ConnectToDB = async () => {
-    const sequelize = new Sequelize({
+
+    export const sequelize = new Sequelize({
         database: 'defaultdb',
         username: 'avnadmin',
         password: 'AVNS_LNgImquHJXNIMn4aMTt',
@@ -15,8 +16,8 @@ const ConnectToDB = async () => {
         dialect: 'postgres',
         dialectOptions: {
             ssl: {
-              require: true, // This will help you. But you will see nwe error
-              rejectUnauthorized: false // This line will fix new error
+              require: true,  
+              rejectUnauthorized: false 
             }
           },
         /*
@@ -27,24 +28,43 @@ const ConnectToDB = async () => {
           }
           */
       });
+    
       
       try{
           sequelize.authenticate();
           console.log('Connection has been established successfully.');
       }catch(err){
      console.error(err)
-      }}
+      }
 
 
 
 
+ export const Email = sequelize.define('Email', {
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false
+        },
+    });
+
+    (async () => {
+        await sequelize.sync({ force: true });
+      })();
 
 
-ConnectToDB();
+     const SendEmail = async (req: Request, res: Response) => {
+        const email = await Email.create({
+            email:req.body.email,
+        })
+     }
+
+
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, world!');
 });
 
+app.post('/send-email', SendEmail);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
