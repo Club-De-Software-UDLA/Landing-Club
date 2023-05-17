@@ -67,7 +67,6 @@ export default function Home()  {
          
           <div>
             <PageCard />
-        
           </div>
          </div>
          

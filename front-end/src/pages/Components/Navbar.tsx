@@ -2,16 +2,14 @@ import { Navbar, Button, Link, Text } from "@nextui-org/react";
 
 export default function App() {
   const collapseItems = [
-    "Features",
-    "Customers",
-    "Pricing",
-    "Company",
-    "Legal",
-    "Team",
-    "Help & Feedback",
-    "Login",
-    "Sign Up",
+    { title: "Inicio", url: "/" },
+    { title: "UDLA Blockchain Day", url: "https://www.eth-tricolor.org" },
+    { title: "Únete al club", url: "/join-club" }
   ];
+
+  const links = [
+    
+  ]
 
   return (
     <Navbar isBordered variant="sticky">
@@ -32,15 +30,15 @@ export default function App() {
       </Navbar.Content>
       <Navbar.Collapse>
         {collapseItems.map((item, index) => (
-          <Navbar.CollapseItem key={item}>
+          <Navbar.CollapseItem key={item.title}>
             <Link
               color="inherit"
               css={{
                 minWidth: "100%",
               }}
-              href="#"
+              href= {item.url}
             >
-              {item}
+              {item.title}
             </Link>
           </Navbar.CollapseItem>
         ))}

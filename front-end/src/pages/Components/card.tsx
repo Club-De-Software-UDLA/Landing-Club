@@ -30,7 +30,7 @@ export default function PageCard() {
         </Card>
       </Grid>
       <Grid sm={12} md={5}>
-        <Card css={{ mw: "330px" }}>
+        <Card css={{ mw: "500px" }}>
           <Card.Header>
             <Text b>Cómo unirte?</Text>
           </Card.Header>
@@ -40,7 +40,6 @@ export default function PageCard() {
            Ingresa tu email aquí
             </Text>
           </Card.Body>
-          <h3> Únete al club:</h3>
           <input type="text" placeholder="email"></input>
           <Card.Divider />
           <Card.Footer>

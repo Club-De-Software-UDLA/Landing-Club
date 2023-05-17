@@ -28,13 +28,6 @@ const Footer = () => {
 
 
 
-      <BsFacebook/>
-   
-      
-      <FaTwitter/>
-      <FaInstagram/>
-      <SiEthereum/>
-      <BsPhone/>
         
       </div>
     </footer>
