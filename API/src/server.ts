@@ -2,12 +2,12 @@ import express, { Request, Response } from 'express';
 import { Sequelize } from 'sequelize';
 import { Model, DataTypes } from 'sequelize';
 import sgMail from '@sendgrid/mail';
-
+import cors from 'cors';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 const EmailKey : string = process.env.SENDGRID_API_KEY ?? ''
-
+app.use(cors());
 
 export const sequelize = new Sequelize({
   database: 'defaultdb',
@@ -52,7 +52,7 @@ export const Email = sequelize.define('Email', {
 })();
 
 
-const SendEmailSendGrid = async () => {
+/*const SendEmailSendGrid = async () => {
   sgMail.setApiKey(EmailKey);
   const msg: sgMail.MailDataRequired = {
     to: 'test@example.com', // Change to your recipient
@@ -70,7 +70,7 @@ const SendEmailSendGrid = async () => {
     .catch((error) => {
       console.error(error);
     });
-}
+}*/
 
 //sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const SendEmail = async (req: Request, res: Response) => {
@@ -80,7 +80,7 @@ const SendEmail = async (req: Request, res: Response) => {
       email: req.body.email,
     });
     res.status(200).json({ message: 'Email stored successfully' });
-    SendEmailSendGrid();
+   // SendEmailSendGrid();
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error storing email' });
