@@ -8,17 +8,17 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext(); 
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title"> Club De Software </h1>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{ backgroundColor: '#212121'}}>
+      <div className="container" style={{ backgroundColor: '#212121'}}>
+        <h1 className="hero__title" style={{color:'#39FF14' }}>   Club De Software </h1>
         <p className="hero__subtitle">Udla</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Unirme al club  ⏱️
           </Link>
         </div>
       </div>
@@ -30,8 +30,9 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Club De Software`}
       description="Description will go into a meta tag in <head />">
+      
       <HomepageHeader />
       <main>
         <HomepageFeatures />

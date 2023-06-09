@@ -35,27 +35,32 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+
+
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4')} style={{ backgroundColor: '#212121' }}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3 style={{ color: '#39FF14', fontFamily: 'Futura, sans-serif' }}>{title}</h3>
+        <p style={{ color: 'white', fontFamily: 'Futura, sans-serif' }}>{description}</p>
       </div>
     </div>
   );
 }
 
+
+
+
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} style={{ backgroundColor: '#212121'}}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature key={idx} {...props}/>
           ))}
         </div>
       </div>
