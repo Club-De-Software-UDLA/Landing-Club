@@ -4,12 +4,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Clases De Programacion',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Aprende a programar con nosotros, tenemos clases de programacion en diferentes lenguajes de programacion.
       </>
     ),
   },
@@ -42,6 +41,7 @@ function Feature({ Svg, title, description }) {
     <div className={clsx('col col--4')} style={{ backgroundColor: '#212121' }}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
+        
       </div>
       <div className="text--center padding-horiz--md">
         <h3 style={{ color: '#39FF14', fontFamily: 'Futura, sans-serif' }}>{title}</h3>
